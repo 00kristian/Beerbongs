@@ -412,6 +412,34 @@ body::before {
   box-shadow: 0 0 15px rgba(34, 197, 94, 0.3);
 }
 
+.btn-half-plus {
+  background: var(--success);
+  color: white;
+  position: relative;
+  overflow: visible;
+  width: 40px;
+  height: 40px;
+  font-size: 1rem;
+}
+
+.btn-half-plus:hover {
+  background: #16a34a;
+  box-shadow: 0 0 12px rgba(34, 197, 94, 0.25);
+}
+
+.btn-half-minus {
+  background: var(--danger);
+  color: white;
+  width: 40px;
+  height: 40px;
+  font-size: 1rem;
+}
+
+.btn-half-minus:hover {
+  background: #dc2626;
+  box-shadow: 0 0 12px rgba(239, 68, 68, 0.25);
+}
+
 /* ========== Confetti Burst ========== */
 .confetti-wrapper {
   position: absolute;

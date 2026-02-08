@@ -61,7 +61,24 @@ export function AdminPanel() {
               >
                 -
               </button>
-              <span className="count">{user.count}</span>
+              <button
+                className="btn btn-half-minus"
+                onClick={() => updateCount(user.id, -0.5)}
+              >
+                -½
+              </button>
+              <span className="count">
+                {Number.isInteger(user.count) ? user.count : user.count.toFixed(1)}
+              </span>
+              <button
+                className="btn btn-half-plus"
+                onClick={() => updateCount(user.id, 0.5)}
+              >
+                +½
+                <div className={`confetti-wrapper${confettiId === user.id ? ' active' : ''}`}>
+                  <ConfettiPieces />
+                </div>
+              </button>
               <button
                 className="btn btn-plus"
                 onClick={() => updateCount(user.id, 1)}

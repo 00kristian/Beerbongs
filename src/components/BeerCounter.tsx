@@ -29,7 +29,7 @@ export function BeerCounter({ name, count, rank, maxCount }: BeerCounterProps) {
         {medal}
       </span>
       <span className="name">{name}</span>
-      <span className={`count${pop ? ' pop' : ''}`}>{count}</span>
+      <span className={`count${pop ? ' pop' : ''}`}>{Number.isInteger(count) ? count : count.toFixed(1)}</span>
       <div className="progress-bar-track">
         <div
           className="progress-bar-fill"
